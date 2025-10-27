@@ -1,8 +1,8 @@
 // src/app/store.js
 import { configureStore } from "@reduxjs/toolkit";
-import tripReducer from "../features/trips/tripSlice";
-import logReducer from "../features/logs/logsSlice";
-import authReducer from "../features/auth/authSlice";
+import tripReducer from "../features/trips/tripSlice.js";
+import logReducer from "../features/logs/logsSlice.js";
+import authReducer from "../features/auth/authSlice.js";
 
 const store = configureStore({
   reducer: {

@@ -44,7 +44,7 @@ export default function AddLogModal({ tripId, open, onClose, onSubmit }) {
       dataToSubmit.total_mileage_today= null;
     }
     dataToSubmit.trip = tripId
-    
+
     onSubmit(dataToSubmit);
   };
 
@@ -78,7 +78,7 @@ export default function AddLogModal({ tripId, open, onClose, onSubmit }) {
             </div>
           ))}
 
-          <div className="flex justify-end space-x-2 mt-4">
+          <div className="flex gap-5 justify-end space-x-2 mt-4">
             <Button
               type="button"
               variant="outline"
@@ -87,7 +87,7 @@ export default function AddLogModal({ tripId, open, onClose, onSubmit }) {
             >
               Cancel
             </Button>
-            <Button type="submit" className="bg-blue-600 text-white">
+            <Button type="submit" >
               Save Log
             </Button>
           </div>

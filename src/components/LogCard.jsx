@@ -2,6 +2,7 @@ import React from "react";
 import api from "../services/api";
 
 export default function LogCard({ log, onSelect }) {
+    console.log("Rendering LogCard for log:", log);
   const handleDownloadPDF = async (e) => {
     e.stopPropagation();
 
@@ -28,29 +29,6 @@ export default function LogCard({ log, onSelect }) {
       link.remove();
       window.URL.revokeObjectURL(blobUrl);
 
-      // Fetch the file
-
-      //   const response = await fetch(url, {
-      //     method: "GET",
-      //     headers: {
-      //       Authorization: `Bearer ${localStorage.getItem("token")}`, // Auth if needed
-      //     },
-      //   });
-
-      //   if (!response.ok) throw new Error("Failed to download PDF");
-
-      //   // Convert response to blob
-      //   const blob = await response.blob();
-      //   const blobUrl = window.URL.createObjectURL(blob);
-
-      //   // Create a temporary link to trigger download
-      //   const link = document.createElement("a");
-      //   link.href = blobUrl;
-      //   link.download = `log_${log.id}.pdf`;
-      //   document.body.appendChild(link);
-      //   link.click();
-      //   link.remove();
-      //   window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
       console.error("Error downloading PDF:", error);
       alert("Failed to download log PDF.");
@@ -78,7 +56,7 @@ export default function LogCard({ log, onSelect }) {
           <strong>Dropoff:</strong> {log.dropoff_location || "N/A"}
         </p>
         <p>
-          <strong>Trailer:</strong> {log.trailer_number || "N/A"}
+          <strong>Trailer:</strong> {log.trailer_or_plate || "N/A"}
         </p>
       </div>
 

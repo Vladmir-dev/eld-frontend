@@ -10,11 +10,17 @@ function PrivateRoute({ children }) {
   return isAuthenticated() ? children : <Navigate to="/login" />;
 }
 
+const route = window.location.pathname;
+console.log("Current route:", route);
+
 export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 text-gray-800 m-0 p-0">
-        <Navbar />
+   
+         <Navbar />
+  
+       
         <div className="container mx-auto px-4 py-6">
           <Routes>
             <Route path="/login" element={<LoginPage />} />

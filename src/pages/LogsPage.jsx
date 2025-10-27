@@ -5,7 +5,7 @@ import {
   fetchEntries,
   createLog,
   //   clearEntries,
-} from "../features/logs/logsSlice";
+} from "../features/logs/logSlice";
 import MapDisplay from "../components/MapDisplay";
 import LogCard from "../components/LogCard";
 import EntryCard from "../components/EntryCard";
